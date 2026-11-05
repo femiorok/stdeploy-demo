@@ -1,0 +1,10 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>stdeploy demo</title>
+<style>body{font-family:system-ui;background:#0b0f19;color:#e6e8ef;display:grid;place-items:center;height:100vh;margin:0}
+.card{padding:2rem 3rem;border:1px solid #2a3350;border-radius:14px;background:#121829;text-align:center}
+code{color:#7dd3fc}</style></head>
+<body><div class="card"><h1>🚀 Deployed by stdeploy</h1>
+<p>Control plane: <code>SpacetimeDB</code></p>
+<p id="where">Static build (Vercel)</p><p><small>v1</small></p></div>
+<script>fetch('/api/info').then(r=>r.ok?r.json():null).then(j=>{if(j)document.getElementById('where').textContent='Served by Bun ('+j.runtime+') on port '+j.port+' · pid '+j.pid}).catch(()=>{})</script>
+</body></html>

@@ -1,0 +1,1 @@
+{ "name": "stdeploy-demo", "private": true, "scripts": { "start": "bun run server.ts" } }
